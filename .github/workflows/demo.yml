@@ -30,7 +30,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with: 
          name: dist-files
-         path: dist 
+         path: dist
+      - name: list dist-files
+        run: pwd && ls -lart   
            
   deploy:
     needs: build
